@@ -1,15 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_g8/constants.dart';
 
-class Background extends StatefulWidget {
-  Background({Key? key}) : super(key: key);
+class Background extends StatelessWidget {
+  final Widget child;
 
-  @override
-  State<Background> createState() => _BackgroundState();
-}
+  Background({
+    Key? key, 
+    required this.child
+  }) : super(key: key);
 
-class _BackgroundState extends State<Background> {
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      height: size.height,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: gPrimaryColor1,
+            image: DecorationImage(
+          image: AssetImage(
+            "assets/images/astro.png",
+          ),
+          fit: BoxFit.cover,
+        )),
+      child: Stack(
+        alignment: Alignment.center,
+        children: <Widget>[
+          child,
+        ],
+      ),
+    );
   }
 }
