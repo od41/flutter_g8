@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_g8/constants.dart';
 import 'package:flutter_g8/screens/customize_page.dart';
+import 'package:flutter_g8/components/skip.dart';
 
 class RoundedButton extends StatelessWidget {
   final String text;
@@ -11,7 +12,7 @@ class RoundedButton extends StatelessWidget {
     Key? key,
     required this.text,
     required this.press,
-    this.color = gPrimaryColor1,
+    this.color = gBlackColor,
     this.textColor = Colors.white,
   }) : super(key: key);
 
@@ -41,7 +42,7 @@ class RoundedButton extends StatelessWidget {
       onPressed: () {},
       // onPressed: press,
       style: ElevatedButton.styleFrom(
-          primary: color,
+          primary: gBlackColor,
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           textStyle: TextStyle(
               color: textColor, fontSize: 18, fontWeight: FontWeight.w500)),

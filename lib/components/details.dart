@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_g8/components/rounded_button.dart';
 import 'package:flutter_g8/components/skip.dart';
 import 'package:flutter_g8/screens/lets_go_page.dart';
+import 'package:flutter_g8/constants.dart';
 
 class Details extends StatelessWidget {
   String heading;
@@ -36,18 +37,20 @@ class Details extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.fromLTRB(0, 60, 0, 40),
+              padding: EdgeInsets.fromLTRB(0, 60, 0, 10),
               child: Text(
                 heading,
                 style: TextStyle(
-                  color: Colors.black87,
+                  color: gBlackColor,
                   fontSize: 35,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
+
+
             Padding(
-              padding: EdgeInsets.fromLTRB(0, 0, 0, 40),
+              padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
               child: Text(
                 body,
                 style: TextStyle(
@@ -58,43 +61,51 @@ class Details extends StatelessWidget {
               ),
             ),
 
-            Row(
-              children: [
-                Icon(
-                  Icons.circle,
-                  size: 10,
-                  color: Colors.red
-                )
-              ],
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.circle,
+                    size: 10,
+                    color: Colors.red,
+
+                  )
+                ],
+              ),
             ),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                TextButton(
-                  child: Text(
-                    "Skip",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black45
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const LetsGoPage()
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  TextButton(
+                      child: Text(
+                        "Skip",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black45
+                        ),
                       ),
-                    );
-                  }
-                ),
+                      onPressed: () {
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(builder: (context) => const LoginPage()
+                        //   ),
+                        // );
+                      }
+                  ),
 
-                RoundedButton(
-                  text: "Next",
-                  press: () {},
-                  color: Colors.transparent,
-                ),
-              ],
-            )
+                  RoundedButton(
+                    text: "Next",
+                    press: () {},
+                    color: Colors.transparent,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

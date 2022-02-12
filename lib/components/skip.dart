@@ -1,66 +1,39 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_g8/constants.dart';
-import 'package:flutter_g8/screens/customize_page.dart';
-import 'package:flutter_g8/screens/lets_go_page.dart';
+import 'package:flutter_g8/components/background.dart';
+import 'package:flutter_g8/components/details.dart';
 
-
-class SkipButton extends StatelessWidget {
-  final String text;
-  final Function press;
-  final Color color, textColor;
-
-  const SkipButton({
-    Key? key,
-    required this.text,
-    required this.press,
-    this.color = gWhiteColor,
-    this.textColor = Colors.black45,
-  }) : super(key: key);
+class LoginPage extends StatelessWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
-      width: size.width * 0.5,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(29),
-        child: skipButton(context),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "BeFit",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 24,
+            color: Colors.white,
+            height: 0.9,
+          ),
+        ),
+        backgroundColor: Colors.purple,
       ),
+      body: Background(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+
+            children: [
+              Details(
+                  heading: "Login!",
+                  body: "Explore the all new way to build your fitness & find the perfect fit for you.",
+                  position: 0
+              )
+            ],
+          )
+      ),
+
     );
   }
-
-
-
-  Widget skipButton(var context) {
-    return TextButton(
-      child:
-      Text(
-        text,
-        style: TextStyle(color: textColor),
-      ),
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const LetsGoPage()),
-        );
-      },
-      // onPressed: press(context),
-      style: TextButton.styleFrom(
-          primary: color,
-          padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-          textStyle: TextStyle(
-              color: textColor, fontSize: 18, fontWeight: FontWeight.w500)),
-    );
-  }
-
-
 }
-  // class press(var context) {
-  //   return Navigator.push(
-  //     context,
-  //     MaterialPageRoute(builder: (context) => const LetsGoPage()),
-  //   );
-  // }
-
-
