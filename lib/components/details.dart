@@ -70,8 +70,8 @@ class Details extends StatelessWidget {
                     Icons.circle,
                     size: 10,
                     color: Colors.red,
-
-                  )
+                  ),
+                  // _indicator(true)
                 ],
               ),
             ),
@@ -124,4 +124,5 @@ class Details extends StatelessWidget {
       ],
     );
   }
+
 }
