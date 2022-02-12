@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_g8/components/rounded_button.dart';
+import 'package:flutter_g8/components/skip.dart';
+import 'package:flutter_g8/screens/lets_go_page.dart';
 
 class Details extends StatelessWidget {
   String heading;
@@ -24,7 +26,11 @@ class Details extends StatelessWidget {
           children: [
             Text(
               heading,
-              style: TextStyle(color: Colors.black54)
+              style: TextStyle(
+                  color: Colors.black54,
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+              )
             ),
             Text(
               body,
@@ -39,13 +45,23 @@ class Details extends StatelessWidget {
             ],),
 
             Row(children: [
-              Text(
-                "Skip",
-                style: TextStyle()
-              ), 
+              TextButton(
+                child: Text("Skip"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const LetsGoPage()),
+                    );
+                  }
+              ),
+              // SkipButton(
+              //     text: "Skip",
+              //     press: press
+              // ),
               RoundedButton(
                 text: "Next", 
-                press: () {}
+                press: () {},
+                color: Colors.transparent,
               )
             ],)
           ],),
@@ -64,12 +80,12 @@ class Details extends StatelessWidget {
         Icon(
           Icons.circle,
           size: 10,
-          color: currentPos == 1  ? Colors.red : Colors.black
+          color: currentPos == 1  ? Colors.blue: Colors.black
         ),
         Icon(
           Icons.circle,
           size: 10,
-          color: currentPos == 2  ? Colors.red : Colors.black
+          color: currentPos == 2  ? Colors.green : Colors.black
         ),
       ],
     );
