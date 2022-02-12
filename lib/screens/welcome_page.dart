@@ -12,26 +12,25 @@ class WelcomePage extends StatelessWidget {
         title: const Text(
           "BeFit",
           style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
-                  color: Colors.white,
-                  height: 0.9,
-                ),
+            fontWeight: FontWeight.bold,
+            fontSize: 24,
+            color: Colors.white,
+            height: 0.9,
+          ),
         ),
         backgroundColor: Colors.purple,
       ),
       body: Background(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Details(
-              heading: "Welcome!", 
-              body: "Explore the all new way to build your fitness & find the perfect fit for you.", 
-              position: 0
-            )
-          ],
-        )
-      ),
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Details(
+              heading: "Welcome!",
+              body:
+                  "Explore the all new way to build your fitness & find the perfect fit for you.",
+              position: 0)
+        ],
+      )),
     );
   }
 }

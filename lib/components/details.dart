@@ -8,63 +8,64 @@ class Details extends StatelessWidget {
   String body;
   int position;
 
-  Details({ 
+  Details({
     Key? key,
     required this.heading,
     required this.body,
     required this.position,
-      }) : super(key: key);
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
+      height: MediaQuery.of(context).size.height * 0.49,
+      // height: size.height * .6,
       // alignment: Alignment.bottomCenter,
-      color: Colors.white,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(40),
+          topRight: Radius.circular(40),
+        ),
+      ),
+
       child: Positioned(
         child: Column(
           children: [
-            Text(
-              heading,
-              style: TextStyle(
+            Text(heading,
+                style: TextStyle(
                   color: Colors.black54,
-                fontSize: 35,
-                fontWeight: FontWeight.bold,
-              )
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+                )),
+            Text(body, style: TextStyle(color: Colors.black54)),
+            Row(
+              children: [Icon(Icons.circle, size: 10, color: Colors.red)],
             ),
-            Text(
-              body,
-              style: TextStyle(color: Colors.black54)
-            ),
-            Row(children: [
-              Icon(
-                Icons.circle,
-                size: 10,
-                color: Colors.red
+            Row(
+              children: [
+                TextButton(
+                    child: Text("Skip"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LetsGoPage()),
+                      );
+                    }),
+                // SkipButton(
+                //     text: "Skip",
+                //     press: press
+                // ),
+                RoundedButton(
+                  text: "Next",
+                  press: () {},
+                  color: Colors.transparent,
                 )
-            ],),
-
-            Row(children: [
-              TextButton(
-                child: Text("Skip"),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const LetsGoPage()),
-                    );
-                  }
-              ),
-              // SkipButton(
-              //     text: "Skip",
-              //     press: press
-              // ),
-              RoundedButton(
-                text: "Next", 
-                press: () {},
-                color: Colors.transparent,
-              )
-            ],)
-          ],),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
@@ -72,23 +73,13 @@ class Details extends StatelessWidget {
   Widget _displayPosition(int currentPos) {
     return Row(
       children: [
-        Icon(
-          Icons.circle,
-          size: 10,
-          color: currentPos == 0  ? Colors.red : Colors.black
-        ),
-        Icon(
-          Icons.circle,
-          size: 10,
-          color: currentPos == 1  ? Colors.blue: Colors.black
-        ),
-        Icon(
-          Icons.circle,
-          size: 10,
-          color: currentPos == 2  ? Colors.green : Colors.black
-        ),
+        Icon(Icons.circle,
+            size: 10, color: currentPos == 0 ? Colors.red : Colors.black),
+        Icon(Icons.circle,
+            size: 10, color: currentPos == 1 ? Colors.blue : Colors.black),
+        Icon(Icons.circle,
+            size: 10, color: currentPos == 2 ? Colors.green : Colors.black),
       ],
     );
   }
-  
 }
