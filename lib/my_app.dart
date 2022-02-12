@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_g8/home_page.dart';
+import 'package:flutter_g8/screens/welcome_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -9,11 +9,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Home Page',
+      title: 'BeFit',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        // primarySwatch: Colors.green,
       ),
-      home: const HomePage(),
+      home: const WelcomePage(),
     );
   }
 }
