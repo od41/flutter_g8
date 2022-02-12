@@ -9,31 +9,40 @@ class Details extends StatelessWidget {
   String body;
   int position;
 
-  Details({ 
+  Details({
     Key? key,
     required this.heading,
     required this.body,
     required this.position,
-      }) : super(key: key);
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
-      color: Colors.white,
-      padding: EdgeInsets.fromLTRB(10, 40, 10, 40),
+
+      // height: MediaQuery.of(context).size.height * 0.49,
+      // height: size.height * .6,
+      // alignment: Alignment.bottomCenter,
+      padding: EdgeInsets.fromLTRB(20, 20, 20, 40),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(40),
+          topRight: Radius.circular(40),
+        ),
+      ),
+
       child: Positioned(
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.fromLTRB(0, 20, 0, 40),
+              padding: EdgeInsets.fromLTRB(0, 60, 0, 40),
               child: Text(
                 heading,
                 style: TextStyle(
                   color: Colors.black87,
                   fontSize: 35,
                   fontWeight: FontWeight.bold,
-
                 ),
               ),
             ),
@@ -49,14 +58,15 @@ class Details extends StatelessWidget {
               ),
             ),
 
-
-            Row(children: [
-              Icon(
-                Icons.circle,
-                size: 10,
-                color: Colors.red
+            Row(
+              children: [
+                Icon(
+                  Icons.circle,
+                  size: 10,
+                  color: Colors.red
                 )
-            ],),
+              ],
+            ),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -69,13 +79,15 @@ class Details extends StatelessWidget {
                       color: Colors.black45
                     ),
                   ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const LetsGoPage()),
-                      );
-                    }
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const LetsGoPage()
+                      ),
+                    );
+                  }
                 ),
+
                 RoundedButton(
                   text: "Next",
                   press: () {},
@@ -83,7 +95,8 @@ class Details extends StatelessWidget {
                 ),
               ],
             )
-          ],),
+          ],
+        ),
       ),
     );
   }
@@ -91,23 +104,13 @@ class Details extends StatelessWidget {
   Widget _displayPosition(int currentPos) {
     return Row(
       children: [
-        Icon(
-          Icons.circle,
-          size: 10,
-          color: currentPos == 0  ? Colors.red : Colors.black
-        ),
-        Icon(
-          Icons.circle,
-          size: 10,
-          color: currentPos == 1  ? Colors.blue: Colors.black
-        ),
-        Icon(
-          Icons.circle,
-          size: 10,
-          color: currentPos == 2  ? Colors.green : Colors.black
-        ),
+        Icon(Icons.circle,
+            size: 10, color: currentPos == 0 ? Colors.red : Colors.black),
+        Icon(Icons.circle,
+            size: 10, color: currentPos == 1 ? Colors.blue : Colors.black),
+        Icon(Icons.circle,
+            size: 10, color: currentPos == 2 ? Colors.green : Colors.black),
       ],
     );
   }
-  
 }
