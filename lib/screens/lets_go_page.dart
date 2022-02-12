@@ -27,8 +27,8 @@ class LetsGoPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Details(
-                  heading: "Let's Go!",
-                  body: "Explore the all new way to build your fitness & find the perfect fit for you.",
+                  heading: "Let's Go..",
+                  body: "Get the new fitness updates everyday & improve performance.",
                   position: 0
               )
             ],

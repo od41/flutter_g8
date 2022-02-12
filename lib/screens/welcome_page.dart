@@ -23,6 +23,7 @@ class WelcomePage extends StatelessWidget {
       body: Background(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
+
           children: [
             Details(
               heading: "Welcome Now!",

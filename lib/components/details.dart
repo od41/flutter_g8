@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_g8/components/rounded_button.dart';
 import 'package:flutter_g8/components/skip.dart';
@@ -19,23 +20,36 @@ class Details extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Container(
-      // alignment: Alignment.bottomCenter,
       color: Colors.white,
+      padding: EdgeInsets.fromLTRB(10, 40, 10, 40),
       child: Positioned(
         child: Column(
           children: [
-            Text(
-              heading,
-              style: TextStyle(
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 20, 0, 40),
+              child: Text(
+                heading,
+                style: TextStyle(
+                  color: Colors.black87,
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 0, 0, 40),
+              child: Text(
+                body,
+                style: TextStyle(
                   color: Colors.black54,
-                fontSize: 35,
-                fontWeight: FontWeight.bold,
-              )
+                  fontSize: 20,
+                ),
+                textAlign: TextAlign.center,
+              ),
             ),
-            Text(
-              body,
-              style: TextStyle(color: Colors.black54)
-            ),
+
+
             Row(children: [
               Icon(
                 Icons.circle,
@@ -44,26 +58,31 @@ class Details extends StatelessWidget {
                 )
             ],),
 
-            Row(children: [
-              TextButton(
-                child: Text("Skip"),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const LetsGoPage()),
-                    );
-                  }
-              ),
-              // SkipButton(
-              //     text: "Skip",
-              //     press: press
-              // ),
-              RoundedButton(
-                text: "Next", 
-                press: () {},
-                color: Colors.transparent,
-              )
-            ],)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                TextButton(
+                  child: Text(
+                    "Skip",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black45
+                    ),
+                  ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const LetsGoPage()),
+                      );
+                    }
+                ),
+                RoundedButton(
+                  text: "Next",
+                  press: () {},
+                  color: Colors.transparent,
+                ),
+              ],
+            )
           ],),
       ),
     );

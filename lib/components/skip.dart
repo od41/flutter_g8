@@ -33,7 +33,7 @@ class SkipButton extends StatelessWidget {
 
 
   Widget skipButton(var context) {
-    return ElevatedButton(
+    return TextButton(
       child:
       Text(
         text,
@@ -45,8 +45,8 @@ class SkipButton extends StatelessWidget {
           MaterialPageRoute(builder: (context) => const LetsGoPage()),
         );
       },
-      // onPressed: press,
-      style: ElevatedButton.styleFrom(
+      // onPressed: press(context),
+      style: TextButton.styleFrom(
           primary: color,
           padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
           textStyle: TextStyle(
@@ -56,5 +56,11 @@ class SkipButton extends StatelessWidget {
 
 
 }
+  // class press(var context) {
+  //   return Navigator.push(
+  //     context,
+  //     MaterialPageRoute(builder: (context) => const LetsGoPage()),
+  //   );
+  // }
 
 
