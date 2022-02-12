@@ -3,7 +3,6 @@ import 'package:flutter_g8/components/background.dart';
 import 'package:flutter_g8/components/details.dart';
 
 class LetsGoPage extends StatelessWidget {
-
   const LetsGoPage({Key? key}) : super(key: key);
 
   @override
@@ -21,20 +20,17 @@ class LetsGoPage extends StatelessWidget {
         ),
         backgroundColor: Colors.purple,
       ),
-
       body: Background(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Details(
-                  heading: "Let's Go..",
-                  body: "Get the new fitness updates everyday & improve performance.",
-                  position: 0
-              )
-            ],
-          )
-      ),
-
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Details(
+              heading: "Let's Go..",
+              body:
+                  "Get the new fitness updates everyday & improve performance.",
+              position: 0)
+        ],
+      )),
     );
   }
 }
