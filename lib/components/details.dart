@@ -95,7 +95,11 @@ class Details extends StatelessWidget {
                             if (position == 0) {
                               Navigator.pushReplacementNamed(
                                   context, "/customize");
+                            }else if (position==1) {
+                              Navigator.pushReplacementNamed(context, "/lets_go");
                             }
+                            
+
                           },
                           style: ElevatedButton.styleFrom(
                               primary: gBlackColor,
