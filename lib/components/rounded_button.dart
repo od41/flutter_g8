@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_g8/constants.dart';
-import 'package:flutter_g8/screens/customize_page.dart';
 import 'package:flutter_g8/components/skip.dart';
 
 class RoundedButton extends StatelessWidget {
@@ -40,7 +39,7 @@ class RoundedButton extends StatelessWidget {
       ),
       // TODO: replace empty function with press variable
       onPressed: () {},
-      // onPressed: press,
+      //onPressed: press(),
       style: ElevatedButton.styleFrom(
           primary: gBlackColor,
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -48,5 +47,4 @@ class RoundedButton extends StatelessWidget {
               color: textColor, fontSize: 18, fontWeight: FontWeight.w500)),
     );
   }
-
 }

@@ -18,22 +18,19 @@ class LoginPage extends StatelessWidget {
             height: 0.9,
           ),
         ),
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.blue,
       ),
       body: Background(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-
-            children: [
-              Details(
-                  heading: "Login!",
-                  body: "Explore the all new way to build your fitness & find the perfect fit for you.",
-                  position: 0
-              )
-            ],
-          )
-      ),
-
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Details(
+              heading: "Login!",
+              body:
+                  "Explore the all new way to build your fitness & find the perfect fit for you.",
+              position: 0)
+        ],
+      )),
     );
   }
 }

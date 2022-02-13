@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_g8/components/rounded_button.dart';
 import 'package:flutter_g8/components/skip.dart';
 import 'package:flutter_g8/screens/lets_go_page.dart';
+import 'package:flutter_g8/screens/customize_page.dart';
 import 'package:flutter_g8/constants.dart';
 
 class Details extends StatelessWidget {
@@ -20,10 +21,6 @@ class Details extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-
-      // height: MediaQuery.of(context).size.height * 0.49,
-      // height: size.height * .6,
-      // alignment: Alignment.bottomCenter,
       padding: EdgeInsets.fromLTRB(20, 20, 20, 40),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -32,7 +29,6 @@ class Details extends StatelessWidget {
           topRight: Radius.circular(40),
         ),
       ),
-
       child: Positioned(
         child: Column(
           children: [
@@ -47,8 +43,6 @@ class Details extends StatelessWidget {
                 ),
               ),
             ),
-
-
             Padding(
               padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
               child: Text(
@@ -60,22 +54,16 @@ class Details extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-
             Padding(
               padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    Icons.circle,
-                    size: 10,
-                    color: Colors.red,
-                  ),
+                  _displayPosition(context, position)
                   // _indicator(true)
                 ],
               ),
             ),
-
             Padding(
               padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
               child: Row(
@@ -84,24 +72,39 @@ class Details extends StatelessWidget {
                   TextButton(
                       child: Text(
                         "Skip",
-                        style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black45
-                        ),
+                        style: TextStyle(fontSize: 20, color: Colors.black45),
                       ),
                       onPressed: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => const LoginPage()
-                        //   ),
-                        // );
-                      }
-                  ),
-
-                  RoundedButton(
-                    text: "Next",
-                    press: () {},
-                    color: Colors.transparent,
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoginPage()),
+                        );
+                      }),
+                  Container(
+                    width: 120,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(29),
+                      child: ElevatedButton(
+                          child: Text("Next"),
+                          onPressed: () {
+                            if (position == 0) {
+                              Navigator.pushReplacementNamed(
+                                  context, "/customize");
+                            } else if (position == 1) {
+                              Navigator.pushReplacementNamed(
+                                  context, "/lets_go");
+                            }
+                          },
+                          style: ElevatedButton.styleFrom(
+                              primary: gBlackColor,
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 20, vertical: 20),
+                              textStyle: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500))),
+                    ),
                   ),
                 ],
               ),
@@ -112,17 +115,37 @@ class Details extends StatelessWidget {
     );
   }
 
-  Widget _displayPosition(int currentPos) {
+  Widget _displayPosition(context, int currentPos) {
     return Row(
       children: [
-        Icon(Icons.circle,
-            size: 10, color: currentPos == 0 ? Colors.red : Colors.black),
-        Icon(Icons.circle,
-            size: 10, color: currentPos == 1 ? Colors.blue : Colors.black),
-        Icon(Icons.circle,
-            size: 10, color: currentPos == 2 ? Colors.green : Colors.black),
+        IconButton(
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, "/");
+          },
+          icon: Icon(Icons.circle,
+              size: currentPos == 0 ? 14 : 10,
+              color: currentPos == 0 ? Colors.red : Colors.black),
+        ),
+        SizedBox(
+          width: 2,
+        ),
+        IconButton(
+          padding: EdgeInsets.all(0),
+          onPressed: () {},
+          icon: Icon(Icons.circle,
+              size: currentPos == 1 ? 14 : 10,
+              color: currentPos == 1 ? Colors.blue : Colors.black26),
+        ),
+        SizedBox(
+          width: 2,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.circle,
+              size: currentPos == 2 ? 14 : 10,
+              color: currentPos == 2 ? Colors.green : Colors.black26),
+        )
       ],
     );
   }
-
 }

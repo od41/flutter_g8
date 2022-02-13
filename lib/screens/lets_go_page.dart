@@ -8,6 +8,7 @@ class LetsGoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
       // appBar: AppBar(
       //   title: const Text(
       //     "BeFit",
@@ -20,6 +21,8 @@ class LetsGoPage extends StatelessWidget {
       //   ),
       //   backgroundColor: Colors.purple,
       // ),
+=======
+>>>>>>> a75d71f3981e9dc6a208fbfc8622999889f37ad0
       body: Background(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -28,7 +31,7 @@ class LetsGoPage extends StatelessWidget {
               heading: "Let's Go..",
               body:
                   "Get the new fitness updates everyday & improve performance.",
-              position: 0)
+              position: 2)
         ],
       )),
     );
