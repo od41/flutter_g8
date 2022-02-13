@@ -66,11 +66,7 @@ class Details extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    Icons.circle,
-                    size: 10,
-                    color: Colors.red,
-                  ),
+                  _displayPosition(position)
                   // _indicator(true)
                 ],
               ),
@@ -114,13 +110,23 @@ class Details extends StatelessWidget {
 
   Widget _displayPosition(int currentPos) {
     return Row(
+      
       children: [
         Icon(Icons.circle,
-            size: 10, color: currentPos == 0 ? Colors.red : Colors.black),
+            size: currentPos == 0 ? 14 : 10, 
+            color: currentPos == 0 ? Colors.red : Colors.black),
+        
+        SizedBox(width: 2,),
+
         Icon(Icons.circle,
-            size: 10, color: currentPos == 1 ? Colors.blue : Colors.black),
+            size: currentPos == 1 ? 14 : 10,
+            color: currentPos == 1 ? Colors.blue : Colors.black26),
+        
+        SizedBox(width: 2,),
+
         Icon(Icons.circle,
-            size: 10, color: currentPos == 2 ? Colors.green : Colors.black),
+            size: currentPos == 2 ? 14 : 10,
+            color: currentPos == 2 ? Colors.green : Colors.black26),
       ],
     );
   }
