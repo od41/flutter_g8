@@ -59,7 +59,7 @@ class Details extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  _displayPosition(position)
+                  _displayPosition(context, position)
                   // _indicator(true)
                 ],
               ),
@@ -115,11 +115,13 @@ class Details extends StatelessWidget {
     );
   }
 
-  Widget _displayPosition(int currentPos) {
+  Widget _displayPosition(context, int currentPos) {
     return Row(
       children: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, "/");
+          },
           icon: Icon(Icons.circle,
               size: currentPos == 0 ? 14 : 10,
               color: currentPos == 0 ? Colors.red : Colors.black),
