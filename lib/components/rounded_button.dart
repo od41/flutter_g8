@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_g8/constants.dart';
-import 'package:flutter_g8/screens/customize_page.dart';
 import 'package:flutter_g8/components/skip.dart';
 
 class RoundedButton extends StatelessWidget {
