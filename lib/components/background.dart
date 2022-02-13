@@ -13,16 +13,21 @@ class Background extends StatelessWidget {
       height: size.height,
       width: double.infinity,
       decoration: BoxDecoration(
-          // color: gPrimaryColor1,
-          image: DecorationImage(
-              image: AssetImage(
-                "assets/images/fitness.jpg",
-              ),
-              fit: BoxFit.contain,
-              alignment: Alignment.topLeft)),
+        // color: gPrimaryColor1,
+        image: DecorationImage(
+            image: AssetImage(
+              "assets/images/fitness.jpg",
+            ),
+            fit: BoxFit.contain,
+            alignment: Alignment.topLeft),
+      ),
       child: Stack(
         alignment: Alignment.center,
         children: <Widget>[
+          Text(
+            "Be Fit",
+            style: TextStyle(color: Colors.red, fontSize: 35),
+          ),
           child,
         ],
       ),
