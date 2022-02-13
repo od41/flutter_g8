@@ -102,24 +102,32 @@ class Details extends StatelessWidget {
     );
                   */
 
-                  ElevatedButton(
-                      child: Text("Next"),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const CustomizePage()),
-                        );
-                        //Navigator.pushReplacementNamed(context, "/customize");
-                      },
-                      style: ElevatedButton.styleFrom(
-                          primary: gBlackColor,
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 20),
-                          textStyle: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500))),
+                  Container(
+                    width: 120,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(29),
+                      child: ElevatedButton(
+                        
+                          child: Text("Next"),
+
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const CustomizePage()),
+                            );
+                            //Navigator.pushReplacementNamed(context, "/customize");
+                          },
+                          style: ElevatedButton.styleFrom(
+                              primary: gBlackColor,
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 20, vertical: 20),
+                              textStyle: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500))),
+                    ),
+                  ),
                 ],
               ),
             ),
