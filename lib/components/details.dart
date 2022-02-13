@@ -88,10 +88,9 @@ class Details extends StatelessWidget {
                   RoundedButton(
                     text: "Next",
                     press: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const CustomizePage()));
+                      Navigator.pushReplacementNamed(context, "/customize");
+                          
+                              
                     },
                     color: Colors.transparent,
                   ),
