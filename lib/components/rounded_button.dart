@@ -40,7 +40,7 @@ class RoundedButton extends StatelessWidget {
       ),
       // TODO: replace empty function with press variable
       onPressed: () {},
-      // onPressed: press,
+      //onPressed: press(),
       style: ElevatedButton.styleFrom(
           primary: gBlackColor,
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -48,5 +48,4 @@ class RoundedButton extends StatelessWidget {
               color: textColor, fontSize: 18, fontWeight: FontWeight.w500)),
     );
   }
-
 }

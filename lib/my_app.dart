@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_g8/screens/customize_page.dart';
+import 'package:flutter_g8/screens/lets_go_page.dart';
 import 'package:flutter_g8/screens/welcome_page.dart';
 
 class MyApp extends StatelessWidget {
@@ -13,7 +15,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           // primarySwatch: Colors.green,
           ),
-      home: const WelcomePage(),
+      initialRoute: '/',
+      routes: {
+        "/": (context) => WelcomePage(),
+        "/customize": (context) => CustomizePage(),
+        "/lets_go": (context) => LetsGoPage(),
+      },
     );
   }
 }

@@ -30,7 +30,7 @@ class CustomizePage extends StatelessWidget {
 
                   heading: "Customize",
                   body: "Feel free to adjust your workout & diet settings according to your comfort",
-                  position: 0
+                  position: 1
               )
             ],
           )

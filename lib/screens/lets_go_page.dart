@@ -28,7 +28,7 @@ class LetsGoPage extends StatelessWidget {
               heading: "Let's Go..",
               body:
                   "Get the new fitness updates everyday & improve performance.",
-              position: 0)
+              position: 2)
         ],
       )),
     );
