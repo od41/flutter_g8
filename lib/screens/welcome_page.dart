@@ -8,18 +8,6 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text(
-      //     "BeFit",
-      //     style: TextStyle(
-      //       fontWeight: FontWeight.bold,
-      //       fontSize: 24,
-      //       color: Colors.white,
-      //       height: 0.9,
-      //     ),
-      //   ),
-      //   backgroundColor: Colors.purple,
-      // ),
       body: Background(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.end,

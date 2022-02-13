@@ -7,34 +7,30 @@ class CustomizePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "BeFit",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
-            color: Colors.white,
-            height: 0.9,
-          ),
-        ),
-        backgroundColor: Colors.purple,
-      ),
+      //appBar: AppBar(
+      //title: const Text(
+      //"BeFit",
+      //style: TextStyle(
+      //fontWeight: FontWeight.bold,
+      //fontSize: 24,
+      //color: Colors.white,
+      //height: 0.9,
+      // ),
+      //),
+      //backgroundColor: Colors.blue,
+      //),
       body: Background(
           child: Column(
-
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Details(
-
-                  heading: "Customize",
-                  body: "Feel free to adjust your workout & diet settings according to your comfort",
-                  position: 1
-              )
-            ],
-          )
-      ),
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Details(
+              heading: "Customize",
+              body:
+                  "Feel free to adjust your workout & diet settings according to your comfort",
+              position: 1)
+        ],
+      )),
     );
   }
 }

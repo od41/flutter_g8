@@ -21,9 +21,6 @@ class Details extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // height: MediaQuery.of(context).size.height * 0.49,
-      // height: size.height * .6,
-      // alignment: Alignment.bottomCenter,
       padding: EdgeInsets.fromLTRB(20, 20, 20, 40),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -32,7 +29,6 @@ class Details extends StatelessWidget {
           topRight: Radius.circular(40),
         ),
       ),
-
       child: Positioned(
         child: Column(
           children: [
@@ -95,11 +91,10 @@ class Details extends StatelessWidget {
                             if (position == 0) {
                               Navigator.pushReplacementNamed(
                                   context, "/customize");
-                            }else if (position==1) {
-                              Navigator.pushReplacementNamed(context, "/lets_go");
+                            } else if (position == 1) {
+                              Navigator.pushReplacementNamed(
+                                  context, "/lets_go");
                             }
-                            
-
                           },
                           style: ElevatedButton.styleFrom(
                               primary: gBlackColor,
