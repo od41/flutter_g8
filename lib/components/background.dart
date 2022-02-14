@@ -3,8 +3,10 @@ import 'package:flutter_g8/constants.dart';
 
 class Background extends StatelessWidget {
   final Widget child;
+  final String image;
 
-  Background({Key? key, required this.child}) : super(key: key);
+  const Background({Key? key, required this.child, required this.image})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class Background extends StatelessWidget {
         // color: gPrimaryColor1,
         image: DecorationImage(
             image: AssetImage(
-              "assets/images/fitness.jpg",
+              image,
             ),
             fit: BoxFit.contain,
             alignment: Alignment.topLeft),
@@ -24,10 +26,10 @@ class Background extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: <Widget>[
-          Text(
-            "Be Fit",
-            style: TextStyle(color: Colors.red, fontSize: 35),
-          ),
+          // Text(
+          //   "Be Fit",
+          //   style: TextStyle(color: Colors.red, fontSize: 35),
+          // ),
           child,
         ],
       ),

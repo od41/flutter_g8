@@ -8,29 +8,30 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "BeFit",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
-            color: Colors.white,
-            height: 0.9,
-          ),
-        ),
-        backgroundColor: Colors.blue,
-      ),
+      // appBar: AppBar(
+      //   title: const Text(
+      //     "BeFit",
+      //     style: TextStyle(
+      //       fontWeight: FontWeight.bold,
+      //       fontSize: 24,
+      //       color: Colors.white,
+      //       height: 0.9,
+      //     ),
+      //   ),
+      //   backgroundColor: Colors.blue,
+      // ),
       body: Background(
+          image: "assets/images/fitness.jpg",
           child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Details(
-              heading: "Login!",
-              body:
-                  "Explore the all new way to build your fitness & find the perfect fit for you.",
-              position: 0)
-        ],
-      )),
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Details(
+                  heading: "Login!",
+                  body:
+                      "Explore the all new way to build your fitness & find the perfect fit for you.",
+                  position: 0)
+            ],
+          )),
     );
   }
 }

@@ -9,16 +9,17 @@ class WelcomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Background(
+          image: "assets/images/wrkout.jpg",
           child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Details(
-              heading: "Welcome!",
-              body:
-                  "Explore the all new way to build your fitness & find the perfect fit for you.",
-              position: 0)
-        ],
-      )),
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Details(
+                  heading: "Welcome!",
+                  body:
+                      "Explore the all new way to build your fitness & find the perfect fit for you.",
+                  position: 0)
+            ],
+          )),
     );
   }
 }

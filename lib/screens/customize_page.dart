@@ -21,16 +21,17 @@ class CustomizePage extends StatelessWidget {
       //backgroundColor: Colors.blue,
       //),
       body: Background(
+          image: "assets/images/exercise.jpg",
           child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Details(
-              heading: "Customize",
-              body:
-                  "Feel free to adjust your workout & diet settings according to your comfort",
-              position: 1)
-        ],
-      )),
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Details(
+                  heading: "Customize",
+                  body:
+                      "Feel free to adjust your workout & diet settings according to your comfort",
+                  position: 1)
+            ],
+          )),
     );
   }
 }
