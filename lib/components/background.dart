@@ -24,10 +24,10 @@ class Background extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: <Widget>[
-          Text(
-            "Be Fit",
-            style: TextStyle(color: Colors.red, fontSize: 35),
-          ),
+          // Text(
+          //   "Keep Fit",
+          //   style: TextStyle(color: Colors.red, fontSize: 35),
+          // ),
           child,
         ],
       ),

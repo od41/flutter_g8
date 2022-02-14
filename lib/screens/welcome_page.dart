@@ -13,7 +13,7 @@ class WelcomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Details(
-              heading: "Welcome!",
+              heading: "Welcome 🤗!",
               body:
                   "Explore the all new way to build your fitness & find the perfect fit for you.",
               position: 0)

@@ -27,7 +27,7 @@ class CustomizePage extends StatelessWidget {
           Details(
               heading: "Customize",
               body:
-                  "Feel free to adjust your workout & diet settings according to your comfort",
+                  "Feel free to adjust your workout and diet settings according to your comfort",
               position: 1)
         ],
       )),
