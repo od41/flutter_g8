@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_g8/components/background.dart';
 
 class LetsGoPage extends StatelessWidget {
 
@@ -6,6 +7,8 @@ class LetsGoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Background(
+      child: Text('Lets go!'),
+    );
   }
 }
