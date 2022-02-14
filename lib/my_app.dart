@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_g8/home_page.dart';
+import 'package:flutter_g8/screens/customize_page.dart';
+import 'package:flutter_g8/screens/lets_go_page.dart';
+import 'package:flutter_g8/screens/welcome_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -9,12 +11,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Home Page',
+      // title: 'BeFit',
       theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
-      home: const HomePage(),
+          // primarySwatch: Colors.green,
+          ),
+      initialRoute: '/',
+      routes: {
+        "/": (context) => WelcomePage(),
+        "/customize": (context) => CustomizePage(),
+        "/lets_go": (context) => LetsGoPage(),
+      },
     );
   }
 }
-
